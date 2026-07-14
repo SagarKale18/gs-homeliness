@@ -55,6 +55,7 @@ header{
   max-width:var(--max);margin:0 auto;padding:18px 32px;
 }
 .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;}
+.brand-logo{height:32px;width:auto;border-radius:4px;object-fit:contain;}
 .brand-mark{width:26px;height:26px;position:relative;flex-shrink:0;}
 .brand-mark span{
   position:absolute;width:16px;height:16px;
@@ -238,10 +239,15 @@ form .btn{align-self:flex-start;border:none;cursor:pointer;margin-top:6px;}
 footer{background:var(--ink);color:#a99c86;padding:44px 0;}
 .foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:0.8rem;}
 .foot-badge{
-  width:30px;height:30px;border:1px solid rgba(246,241,231,0.3);border-radius:8px;
+  width:36px;height:36px;border:1px solid rgba(246,241,231,0.3);border-radius:8px;
   transform:rotate(45deg);display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  overflow:hidden;
 }
-.foot-badge span{transform:rotate(-45deg);font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--saffron);}
+.foot-badge img{
+  transform:rotate(-45deg);
+  width:24px;height:24px;
+  object-fit:contain;
+}
 
 /* ---------- additional gallery colours ---------- */
 .g6{background:linear-gradient(150deg,#c9a227,#8a6d1f);}
@@ -361,7 +367,7 @@ footer{background:var(--ink);color:#a99c86;padding:44px 0;}
 }
 
 /* =========================================================
-   ADDED: image object-position fixes only
+   ADDED: image object-position fixes
    ========================================================= */
 .diamond-frame .content img{ object-position:center; }
 .founder-portrait img{ object-position:center 18%; }
