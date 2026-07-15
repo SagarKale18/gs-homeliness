@@ -203,7 +203,8 @@ blockquote cite{display:block;margin-top:14px;font-style:normal;font-family:'Jet
 .founder-portrait svg{width:52%;height:52%;opacity:0.9;position:relative;z-index:1;}
 .founder-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
 .founder-copy .mono{font-size:0.72rem;color:var(--forest);margin-bottom:10px;display:block;}
-.founder-copy h3{font-size:1.7rem;margin-bottom:16px;}
+.founder-copy h3{font-size:1.7rem;margin-bottom:4px;}
+.founder-title{font-family:'Inter',sans-serif;font-size:1rem;font-weight:500;color:var(--teak-deep);margin-bottom:16px;}
 .founder-copy p{color:#4a4038;margin-bottom:14px;}
 .tag-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;}
 .tag{border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:0.76rem;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.04em;color:#544a3f;}
@@ -381,11 +382,11 @@ footer{background:var(--ink);color:#a99c86;padding:44px 0;}
 .g-frame[data-category="doors"] .content img{ object-position:center 32%; }
 
 /* =========================================================
-   ADDED: WhatsApp sticky button (bottom-left corner)
+   ADDED: WhatsApp sticky button (bottom-right corner)
    ========================================================= */
 .whatsapp-float{
   position:fixed;
-  left:24px;bottom:24px;
+  right:24px;bottom:24px;
   z-index:150;
   width:58px;height:58px;
   border-radius:50%;
@@ -397,6 +398,17 @@ footer{background:var(--ink);color:#a99c86;padding:44px 0;}
 .whatsapp-float:hover{ transform:scale(1.08); }
 .whatsapp-float svg{ width:30px;height:30px;fill:#fff; }
 @media(max-width:640px){
-  .whatsapp-float{ left:16px;bottom:16px;width:52px;height:52px; }
+  .whatsapp-float{ right:16px;bottom:16px;width:52px;height:52px; }
   .whatsapp-float svg{ width:26px;height:26px; }
+}
+
+/* =========================================================
+   CHANGE #1: Mobile hero text overlap fix
+   Reduce triangle strip width on mobile so text doesn't overlap
+   ========================================================= */
+@media(max-width:640px){
+  .hero-tris{width:28%;opacity:0.6;}
+}
+@media(max-width:400px){
+  .hero-tris{width:22%;opacity:0.45;}
 }
